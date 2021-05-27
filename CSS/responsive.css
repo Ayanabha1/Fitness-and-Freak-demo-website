@@ -1,0 +1,59 @@
+
+
+@media only screen and (max-width : 910px) {
+    #team_member1 {
+        position: unset;
+        margin-bottom: 69px;
+        transition: transform 0.5s;
+      }
+      #team_member2 {
+        position: unset;
+        margin-bottom: 69px;
+        transition: transform 0.5s;
+      }
+      #team_member3 {
+        position: unset;
+        margin-bottom: 69px;
+        transition: transform 0.5s;
+      }
+}
+@media only screen and (max-width : 730px) 
+{
+    /* .navcontainer {
+        display: none;
+    } */
+    .burger {
+        display: block;
+        position: absolute;
+        right: 29px;
+        top: -9px;
+    }
+    
+    .navbar_res {
+        height: 55px;
+        transition: all 0.5s ease-out;
+        flex-direction: column;
+        padding-left: 33%;
+    }
+    .navcontainer_diss {
+        display: none;
+        transition: all 0.5s ease-out;
+    }
+    .navcontainer_vis_res {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s ease-out;
+    }
+    .navbar_h_res {
+        height: 165px;
+        transition: all 0.5s ease-in;
+        /* flex-direction: column; */
+    }
+}
+
+@media only screen and (max-width : 558px)
+{
+    .discount_gif_res {
+        width: 80vw;
+    }
+}
