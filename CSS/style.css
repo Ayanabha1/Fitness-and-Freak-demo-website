@@ -43,10 +43,10 @@ header {
 }
 
 .gototop {
-  /* color: limegreen; */
+  color: limegreen;
   position: fixed;
-  bottom: 60px;
-  right: 40px;
+  bottom: 78px;
+  right: 56px;
   display: none;
   z-index: 2;
 }
@@ -87,7 +87,7 @@ header {
   justify-content: start;
   /* position: absolute; */
   width: 100vw;
-  padding-left: 7%;
+  /* padding-left: 7%; */
 }
 #logo {
   margin-left: 20px;
@@ -109,7 +109,9 @@ header {
   /* flex-wrap: wrap; */
   transition: all 0.5s ease-in-out;
 }
-
+.terms { 
+  width: 432px;
+}
 .nav_items {
   list-style-type: none;
   margin: 0px 10px;
@@ -166,6 +168,7 @@ header {
 #home_content {
   display: flex;
   flex-direction: column;
+  margin-left: 125px;
 }
 #home h1 {
   color: white;
@@ -174,7 +177,7 @@ header {
   /* position: absolute; */
   left: 126px;
   display: inline-block;
-  margin-left: 125px;
+  /* margin-left: 125px; */
   margin-top: 146px;
 }
 
@@ -184,7 +187,7 @@ header {
   display: inline-block;
   width: 47%;
   font-family: "Baloo Bhaina 2", cursive;
-  margin-left: 129px;
+  /* margin-left: 129px; */
   margin-bottom: 22px;
 }
 
@@ -194,7 +197,7 @@ header {
   border: 2px solid rgb(18, 224, 11);
   padding: 14px 43px;
   border-radius: 13px;
-  margin-left: 125px;
+  /* margin-left: 125px; */
   position: relative;
   top: 22px;
   font-family: "Baloo Bhaina 2", cursive;
@@ -227,6 +230,10 @@ header {
   display: flex;
   flex-direction: column;
   margin-left: 133px;
+}
+.about_model {
+  position: relative;
+  right: 102px;
 }
 .about_heading {
   font-family: "Ubuntu", sans-serif;
@@ -526,7 +533,7 @@ header {
 .time_table {
   display: flex;
   flex-direction: column;
-  margin-left: 58px;
+  /* margin-left: 58px; */
 }
 .time_table_heading {
   margin-left: 20px;
@@ -553,7 +560,7 @@ header {
   font-size: 22px;
 }
 .daily_hrs {
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   transition: all 0.5s;
 }
 .daily_hrs:hover {
