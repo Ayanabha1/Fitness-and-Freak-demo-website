@@ -1,0 +1,863 @@
+body {
+  padding: 0px 0px;
+  margin: 0px 0px;
+  overflow-x: hidden;
+  width: 100vw;
+  margin-top: -19px;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  width: 100vw;
+  height: auto;
+}
+::selection {
+  background-color: limegreen;
+  color: white;
+}
+.sticky {
+  position: fixed;
+  font-size: 19px;
+  margin-top: 37px;
+  margin-left: 305px;
+  left: -16em;
+  top: -33px;
+  width: 100vw;
+  opacity: 1;
+  height: 122px;
+  background: black;
+  z-index: 2;
+  opacity: 0.7;
+  /* height: auto; */
+  transition: all 0.5s;
+  height: auto;
+  border-radius: 74px;
+}
+
+.fa-chevron-circle-up::before {
+  content: "\f139";
+  color: limegreen;
+}
+.fa-chevron-circle-up::before:hover {
+  color: black;
+}
+
+.gototop {
+  color: limegreen;
+  position: fixed;
+  bottom: 78px;
+  right: 56px;
+  display: none;
+  z-index: 2;
+}
+.top_entrance {
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-name: top_entrance;
+}
+@keyframes top_entrance {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.top_exit {
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-name: top_exit;
+}
+@keyframes top_exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.navbar {
+  display: flex;
+  /* flex-direction: row; */
+  /* margin-left: 7%; */
+  /* flex-wrap: wrap; */
+  justify-content: start;
+  /* position: absolute; */
+  width: 100vw;
+  /* padding-left: 7%; */
+}
+#logo {
+  margin-left: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(18, 224, 11), rgb(225, 248, 14));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+
+  margin-top: 16px;
+}
+.navcontainer {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 57px; */
+  margin-top: 10px;
+  /* flex-wrap: wrap; */
+  transition: all 0.5s ease-in-out;
+}
+.terms {
+  width: 432px;
+}
+.nav_items {
+  list-style-type: none;
+  margin: 0px 10px;
+  transition: all 0.5s;
+}
+/* .nav_items_clicked {
+  color: limegreen;
+}
+.nav_items_unclicked {
+  color: white;
+} */
+.nav_li_res {
+  background-color: green;
+  opacity: 1;
+  /* color: black; */
+  border-radius: 16px;
+  padding: 0px 7px;
+  transition: all 0.5s;
+}
+.nav_items a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+.navbar p {
+  margin-top: 16px;
+}
+.burger {
+  margin-top: 27px;
+  position: absolute;
+  right: 22px;
+  display: none;
+}
+.line {
+  background-color: white;
+  height: 3px;
+  width: 36px;
+  margin-bottom: 5px;
+}
+#home {
+  height: auto;
+  background: url(../img/4.jpg) no-repeat center center/cover;
+}
+#home::before {
+  /* content: "";
+  background: url(../img/4.jpg) no-repeat center center/cover;
+  height: 734px;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px; */
+}
+#home_content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 125px;
+}
+#home h1 {
+  color: white;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 49px;
+  /* position: absolute; */
+  left: 126px;
+  display: inline-block;
+  /* margin-left: 125px; */
+  margin-top: 146px;
+}
+
+.home_text {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  width: 47%;
+  font-family: "Baloo Bhaina 2", cursive;
+  /* margin-left: 129px; */
+  margin-bottom: 22px;
+}
+
+#home_button {
+  text-decoration: none;
+  color: rgb(18, 224, 11);
+  border: 2px solid rgb(18, 224, 11);
+  padding: 14px 43px;
+  border-radius: 13px;
+  /* margin-left: 125px; */
+  position: relative;
+  top: 22px;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 19px;
+  transition: all 0.5s;
+}
+
+#home_button:hover {
+  transition: all 0.5s;
+  color: white;
+  background: grey;
+  border-color: grey;
+}
+#discount {
+  /* display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap; */
+  margin-top: 138px;
+}
+.discount_gifs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#about {
+  margin-top: 86px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 133px;
+}
+
+.about_heading {
+  font-family: "Ubuntu", sans-serif;
+  background: linear-gradient(45deg, rgb(56, 177, 67), rgb(219, 205, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.about_tag {
+  font-size: 38px;
+  font-family: "Baloo Bhaina 2", cursive;
+  display: inline-block;
+}
+#about_description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.about_des_content {
+  display: inline-block;
+  width: 30%;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+#des1 {
+  margin-right: 67px;
+}
+.team_heading {
+  font-family: "Ubuntu", sans-serif;
+  background: linear-gradient(45deg, rgb(56, 177, 67), rgb(219, 205, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 19px;
+}
+.team_contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.team_texts {
+  display: inline-block;
+  width: 20%;
+  margin-left: 133px;
+  margin-top: 70px;
+}
+#team {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-top: -17px;
+  background: url(../img/bg.jpg) no-repeat center center/cover;
+}
+.team_tag {
+  font-size: 38px;
+  font-family: "Baloo Bhaina 2", cursive;
+  display: inline-block;
+  color: white;
+}
+.team_description {
+  color: white;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-style: italic;
+}
+.team_members {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#team_member1 {
+  position: relative;
+  top: 125px;
+  transition: transform 0.5s;
+}
+#team_member2 {
+  position: relative;
+  top: 209px;
+  transition: transform 0.5s;
+}
+#team_member3 {
+  position: relative;
+  top: 227px;
+  transition: transform 0.5s;
+}
+#team_member1:hover {
+  transform: scale(1.25);
+}
+#team_member2:hover {
+  transform: scale(1.25);
+}
+#team_member3:hover {
+  transform: scale(1.25);
+}
+
+#trainer1_id {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  background-color: black;
+  background: black;
+  padding: 8px 20px;
+  position: absolute;
+  top: 235px;
+  left: -11px;
+  font-family: "Baloo Bhaina 2", cursive;
+  box-shadow: 1px 1px 9px white;
+  width: 116px;
+  z-index: 1;
+  height: 54px;
+}
+#trainer1_id h4 {
+  margin: 0px;
+  font-style: italic;
+}
+#trainer1_id h6 {
+  color: limegreen;
+  margin-top: -14px;
+  margin-left: 6px;
+  font-style: italic;
+}
+#trainer2_id {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  background-color: black;
+  background: black;
+  padding: 8px 20px;
+  position: absolute;
+  top: 146px;
+  left: -11px;
+  font-family: "Baloo Bhaina 2", cursive;
+  box-shadow: 1px 1px 9px white;
+  width: 152px;
+  z-index: 1;
+  height: 54px;
+}
+#trainer2_id h4 {
+  margin: 0px;
+  font-style: italic;
+}
+#trainer2_id h6 {
+  color: limegreen;
+  margin-top: -14px;
+  margin-left: 6px;
+  font-style: italic;
+}
+#trainer3_id {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  background-color: black;
+  background: black;
+  padding: 8px 20px;
+  position: absolute;
+  top: 165px;
+  left: -34px;
+  font-family: "Baloo Bhaina 2", cursive;
+  box-shadow: 1px 1px 9px white;
+  width: 116px;
+  z-index: 1;
+  height: 54px;
+}
+#trainer3_id h4 {
+  margin: 0px;
+  font-style: italic;
+}
+#trainer3_id h6 {
+  color: limegreen;
+  margin-top: -14px;
+  margin-left: 6px;
+  font-style: italic;
+}
+
+.services_info {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.ser {
+  display: flex;
+  font-family: "Baloo Bhaina 2", cursive;
+  width: 304px;
+}
+.ser_info {
+  display: inline-block;
+  width: 213px;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+.ser_container {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+}
+.ser h4 {
+  margin-left: 17px;
+}
+.ser_img1 {
+  background-color: limegreen;
+  border-radius: 40px;
+  padding: 19px 23px;
+}
+
+.ser_img2 {
+  background-color: limegreen;
+  border-radius: 43px;
+  padding: 30px 18px;
+}
+.ser_img3 {
+  background-color: limegreen;
+  border-radius: 40px;
+  padding: 19px 21px;
+}
+#membership {
+  /* position: absolute; */
+  top: 183em;
+  background: url(../img/5.jpg) no-repeat center center/cover fixed;
+  /* min-height: 100%; */
+  background-position-y: -437px;
+  width: 100vw;
+  opacity: 0.89;
+  height: auto;
+  margin-top: 107px;
+}
+.membership_plans {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 78px;
+  padding-bottom: 138px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.membership_plans_container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 330px;
+  background-color: white;
+  padding-bottom: 39px;
+}
+.membership_plans_container p {
+  display: inline;
+}
+.membership_imgs {
+  height: 250px;
+}
+.membership_info {
+  width: 224px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+.m_btn {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: limegreen;
+  border: 2px solid limegreen;
+  padding: 7px;
+  /* text-align: center; */
+  border-radius: 13px;
+  width: fit-content;
+  padding: 10px 16px;
+  margin-top: 26px;
+  transition: all 0.5s;
+  font-family: "Baloo Bhaina 2", cursive;
+  cursor: pointer;
+}
+.m_btn:hover {
+  background-color: rgb(0, 0, 0);
+  transition: all 0.5s;
+}
+.price {
+  color: limegreen;
+  font-size: 29px;
+  /* display: inline; */
+  font-family: "Ubuntu", sans-serif;
+}
+.month {
+  /* display: inline; */
+  color: gray;
+  font-style: italic;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+}
+.membership_price {
+  margin-top: 13px;
+}
+
+.membership_plans_info li {
+  list-style-type: none;
+  /* margin-right: 8px; */
+  /* font-weight: bold; */
+  font-family: "Baloo Bhaina 2", cursive;
+}
+.membership_plans_info {
+  margin-left: -16px;
+}
+.membership_plans_info li::before {
+  content: "\2022";
+  color: limegreen;
+  margin-right: 8px;
+  font-weight: bold;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+.membership_plans_info {
+  margin: 0px -41px;
+}
+.membership_plans_container p {
+  font-family: "Baloo Bhaina 2", cursive;
+}
+#time_table_and_subscription {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.time_table {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 58px; */
+}
+.time_table_heading {
+  margin-left: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(56, 177, 67), rgb(219, 205, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+  margin-top: 50px;
+}
+.time_table p {
+  display: inline;
+  margin-left: 18px;
+  font-size: 27px;
+}
+.schedule {
+  margin-left: -40px;
+}
+
+.hrs {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+}
+.daily_hrs {
+  /* border-bottom: 1px solid black; */
+  transition: all 0.5s;
+}
+.daily_hrs:hover {
+  color: limegreen;
+  transition: all 0.5s;
+  border-bottom: 1px solid limegreen;
+}
+.daily_schedule {
+  margin-left: 19px;
+  margin-top: 34px;
+}
+
+.day {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 22px;
+  display: inline-block;
+  margin-right: 250px;
+  width: 127px;
+}
+.daily_time {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 22px;
+  display: inline-block;
+}
+.subscription {
+  padding-top: 126px;
+  margin-left: 58px;
+}
+.subs_tag {
+  font-family: "Ubuntu", sans-serif;
+  /* font-size: 22px; */
+  display: inline;
+  margin-left: 21px;
+  font-size: 27px;
+}
+.subs_input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 19px;
+  margin-top: 62px;
+}
+.s_input {
+  margin-bottom: 25px;
+  padding: 13px 50px;
+  border-radius: 18px;
+  /* border: 2px solid lime; */
+  width: 325px;
+  border: 3px solid gray;
+  font-style: italic;
+  font-size: 18px;
+  color: rgb(56, 177, 67);
+}
+.subs_submit {
+  width: 153px;
+  border-radius: 13px;
+  border: 2px solid limegreen;
+  /* font-style: italic; */
+  font-size: 18px;
+  color: rgb(56, 177, 67);
+  background-color: white;
+  padding: 8px;
+  margin-top: 65px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.subs_submit:hover {
+  transition: all 0.5s;
+  color: white;
+  background-color: rgba(58, 56, 56, 0.76);
+  border: 2px solid rgba(58, 56, 56, 0.76);
+}
+#contact {
+  height: 1328px;
+  margin-top: 120px;
+  background: url(../img/footer_bg.jpg) no-repeat center center/cover;
+  width: 100vw;
+}
+#logo_contact {
+  color: limegreen;
+  font-size: 28px;
+  font-family: "Baloo Bhaina 2", cursive;
+  background: linear-gradient(120deg, rgb(56, 177, 67), rgb(219, 205, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid;
+  border-image-source: linear-gradient(
+    120deg,
+    rgb(56, 177, 67),
+    rgb(219, 205, 12)
+  );
+  border-image-slice: 1;
+  padding: 2px 20px;
+  display: inline-block;
+  width: 212px;
+}
+.contact_info {
+  margin-left: 122px;
+  padding-top: 54px;
+  display: flex;
+  flex-direction: column;
+}
+.contact_us {
+  color: white;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  border-bottom: 1px solid white;
+  width: 120px;
+  margin-top: 60px;
+}
+.contact_input {
+  margin-bottom: 25px;
+  padding: 13px 50px;
+  border-radius: 18px;
+  /* border: 2px solid lime; */
+  width: 325px;
+  border: 3px solid gray;
+  font-style: italic;
+  font-size: 18px;
+  color: rgb(56, 177, 67);
+  background-color: transparent;
+}
+.inputs_contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact_submit {
+  border-radius: 13px;
+  border: 2px solid grey;
+  /* font-style: italic; */
+  font-size: 18px;
+  color: grey;
+  background-color: transparent;
+  padding: 3px 21px;
+  /* margin-top: 65px; */
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 433px;
+  font-style: italic;
+  transition: all 0.5s;
+}
+.contact_submit:hover {
+  transition: all 0.5s;
+  color: rgb(255, 255, 255,0.8);
+  background-color: rgb(0, 0, 0,0.5);
+  border-end-end-radius: 2px solid black;
+}
+.copyright {
+  color: limegreen;
+  background-color: transparent;
+  /* position: relative; */
+  /* bottom: -39px; */
+  /* left: 36%; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+}
+
+
+.pay_navbar {
+  display: flex;
+  /* flex-direction: row; */
+  /* margin-left: 7%; */
+  /* flex-wrap: wrap; */
+  justify-content: start;
+  /* position: absolute; */
+  width: 100vw;
+  /* padding-left: 7%; */
+  background: rgba(0, 0, 0, 0.89);
+  /* padding-top: 17px; */
+}
+.pay_navcontainer {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 57px; */
+  margin-top: 10px;
+  /* flex-wrap: wrap; */
+  transition: all 0.5s ease-in-out;
+}
+.pay_nav_items {
+  list-style-type: none;
+  margin: 0px 10px;
+  transition: all 0.5s;
+}
+.pay_nav_li_res {
+  background-color: green;
+  opacity: 1;
+  /* color: black; */
+  border-radius: 16px;
+  padding: 0px 7px;
+  transition: all 0.5s;
+}
+.pay_nav_items a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+.pay_navbar p {
+  margin-top: 16px;
+  display: inline-block;
+}
+#pay_membership {
+  /* position: absolute; */
+  /* min-height: 100%; */
+  background-position-y: -437px;
+  width: 100vw;
+  opacity: 0.89;
+  height: auto;
+}
+
+
+.pay_membership_plans {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 78px;
+    padding-bottom: 138px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.pay_membership_plans_container {
+  display: flex;
+  flex-direction: column;
+  height: 676px;
+  width: 24rem;
+  background-color: white;
+  padding-bottom: 39px;
+  transition: all 0.5s;
+}
+
+.pay_membership_plans_container_clicked {
+  border: 1px solid limegreen;
+  transform: scale();
+  transform: scale(1);
+  height: 1042px;
+  transition: all 0.5s;
+}
+
+.pay_membership_imgs {
+  height: 309px;
+}
+.pay_inputs {
+  border-radius: 13px;
+  padding: 7px 13px;
+  width: 100%;
+  color: limegreen;
+  margin-bottom: 17px;
+}
+.pay_inp {
+  margin-top: 40px;
+}
+.pay_inp_heading {
+  font-family: "Baloo Bhaina 2", cursive;
+  margin-left: 2px;
+}
+.pay_form {
+  display: none;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+.pay_form_clicked {
+  display: flex;
+  transition: all 0.5s;
+}
+.pm_btn {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: limegreen;
+  border: 2px solid limegreen;
+  padding: 7px;
+  /* text-align: center; */
+  border-radius: 13px;
+  width: fit-content;
+  padding: 10px 16px;
+  margin-top: 26px;
+  transition: all 0.5s;
+  font-family: "Baloo Bhaina 2", cursive;
+  cursor: pointer;
+}

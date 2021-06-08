@@ -1,6 +1,0 @@
-# Fitness-and-Freak-demo-website
-This is a website created by me ...
-Languages that are used here are : html ,css and Javascript ofc .
-This is only the front end portion
-I'll start working on the backend very soon...
-Thanks 
