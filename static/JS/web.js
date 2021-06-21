@@ -70,15 +70,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-let con_btn = document.querySelector(".contact_submit");
-// con_btn.addEventListener('click',()=> {
-//   // swal({
-//   //   title: "Good job!",
-//   //   text: "You clicked the button!",
-//   //   icon: "success",
-//   // });
-//   console.log("Button clicked");
-// })
+
 
 function clicked(){
   swal("Good job!", "Thanks for submitting your response", "success");

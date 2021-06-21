@@ -5,9 +5,29 @@ const port = 80;
 const fs = require("fs");
 const { TIMEOUT } = require("dns");
 
-// let st_ct = 1;
-// let pr_ct = 1;
-// let el_ct = 1;
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/Fitness-and-freak', {useNewUrlParser: true, useUnifiedTopology: true});
+
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+});
+
+
+const ContactSchema = new mongoose.Schema({
+  name: String,
+  email : String,
+  Feedback   : String
+});
+
+
+const Contact = mongoose.model('Contact', ContactSchema);
+
+
+
 
 
 // For serving static files
@@ -26,30 +46,32 @@ app.set("views", path.join(__dirname, "views"));
 app.get("/", (req, res) => {
   res.render("index");
 });
-app.post("/", (req, res) => {
+app.post("/",  (req, res) => {
   const form = req.body;
+
+  const myData = new Contact(form);
+
+  myData.save((err)=> {
+    if (err) {
+      res.status(400).send("Feedback not received");
+    }
+  })
+
   fs.writeFileSync(
     `./Feedback/${req.body.name}.txt`,
-    `Name : ${form.name}\nemail id : ${form.email} \nFeedback : ${form.Contact_review}`
+    `Name : ${form.name}\nemail id : ${form.email} \nFeedback : ${form.Feedback}`
   );
   setTimeout(myFunc, 3000, "funky");
   function myFunc() {
     res.render("");
   }
-  // res.send("done");
+
 });
 app.get("/paypage",(req,res)=> {
   res.render("paypage");
 })
-// app.post("/paypage/#st",(req,res)=> {
-//   console.log(req.body);
-// })
-// app.post("/paypage",(req,res)=> {
-//   res.render("paypage");
-// })
-// app.post("/paypage",(req,res)=> {
-//   res.render("paypage");
-// })
+
+
 app.listen(port, () => {
   console.log(`Website running on port no. ${port}`);
 });
